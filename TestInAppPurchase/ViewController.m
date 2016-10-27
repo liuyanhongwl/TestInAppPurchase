@@ -81,6 +81,8 @@ static const NSString *product_id = @"com.lifelyus.ios.removeads";
         NSLog(@"verify json dictionary : %@", jsonDic);
         NSNumber *status = [jsonDic objectForKey:@"status"];
         if (status.intValue == 0) {
+            //在这里验证返回数据与本包是否匹配
+            //比如验证： "bundle_id", "application_version",
             NSLog(@"验证通过");
             
         }else{
